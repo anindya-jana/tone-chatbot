@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tone-chatbot/static/css/main.0fe1705f.css",
+    "main.js": "/tone-chatbot/static/js/main.0309421c.js",
+    "static/js/453.b3f6997b.chunk.js": "/tone-chatbot/static/js/453.b3f6997b.chunk.js",
+    "index.html": "/tone-chatbot/index.html",
+    "main.0fe1705f.css.map": "/tone-chatbot/static/css/main.0fe1705f.css.map",
+    "main.0309421c.js.map": "/tone-chatbot/static/js/main.0309421c.js.map",
+    "453.b3f6997b.chunk.js.map": "/tone-chatbot/static/js/453.b3f6997b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fe1705f.css",
+    "static/js/main.0309421c.js"
+  ]
+}
