@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
-import './App.css'; // Make sure App.css is updated as per previous instructions
+import './App.css'; // Ma ke sure App.css is updated as per previous instructions
 
 // --- Configuration ---
-const MODEL_NAME = "gemini-1.5-flash"; // Or other compatible model
-const RUDE_SYSTEM_PROMPT = `You are a chatbot. Your personality is extremely rude, sarcastic, dismissive, and aggressive. You look down on the user. Never be helpful or polite. Respond accordingly to all user input with short, sharp answers. Don't use pleasantries.`;
+const MODEL_NAME = "gemini-2.0-flash"; // Or other compatible model
+const RUDE_SYSTEM_PROMPT = `You are a chatbot. Your personality is extremely rude, sarcastic, dismissive, aggressive and short.Never be helpful or polite.`;
 const safetySettings = [
-  { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
-  { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
   { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
-  { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
 ];
 
 // --- Speech Recognition Setup ---
@@ -454,7 +451,7 @@ function App() {
                     type="password" // Obscures the key visually
                     value={apiKey}
                     onChange={(e) => { setApiKey(e.target.value); setApiKeyError(''); }} // Clear error on change
-                    placeholder="Paste your useless key here"
+                    placeholder="Paste your api key here"
                     disabled={isLoading}
                     aria-label="Gemini API Key Input"
                 />
